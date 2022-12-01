@@ -13,7 +13,7 @@ if (isset($_POST['login'])) {
             
             DB::query('UPDATE users SET password=:password WHERE username=:username', array(':username'=>$username, ':password'=>password_hash($otp, PASSWORD_BCRYPT)));
             
-            file_get_contents ("https://api.telegram.org/[Bot_Token]/sendmessage?chat_id=".$chatid."&text=".$otp);
+            file_get_contents ("https://api.telegram.org/bot5529863029:AAFFDEahz_dbSbTG_7sTKtEll6UrzhxNutk/sendmessage?chat_id=".$chatid."&text=".$otp);
             
             echo '
             <center>
